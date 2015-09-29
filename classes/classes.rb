@@ -1,24 +1,24 @@
 
-class Dog   #Dog class created
-  attr_accessor :name, :loud, :soft  #Creating dog name
+class Dog   
+  attr_accessor :name, :loud, :soft 
 
-  def initialize(name)  #Allows to pass dog name to dog
-    self.name = name  # => "Riley"
+  def initialize(name)  
+    self.name = name  
 
   end
 
   def bark
-      if @loud_soft == :loud   # => false, true, true
-      return "WOOF!"           # => "WOOF!", "WOOF!"
-    elsif @loud_soft == :soft  # => false
+      if @loud_soft == :loud   
+      return "WOOF!"          
+    elsif @loud_soft == :soft  
       return "woof!"
       else
-      return "woof!"           # => "woof!"
+      return "woof!"         
       end
   end
 
   def bark_volume=(loud_soft)
-    @loud_soft = loud_soft     # => :loud, :loud
+    @loud_soft = loud_soft     
   end
 
   def greet(animal)
@@ -28,15 +28,13 @@ end
 
 
 class BigDog < Dog
-  attr_accessor :name, :loud, :soft  #Creating dog name
+  attr_accessor :name, :loud, :soft  
 
-  def initialize(name)  #Allows to pass dog name to dog
-    self.name = name  # => "Fido"
+  def initialize(name)  
+    self.name = name
+    @loud_soft = :loud
   end
 
-  def bark_volume
-
-  end
 
   def greet(animal)
      if animal.color == "red"
@@ -47,9 +45,9 @@ class BigDog < Dog
 end
 
 class Lizard
-  attr_accessor :color  # => nil
+  attr_accessor :color  
 
   def initialize(color)
-    self.color = color   # => "green"
+    self.color = color   
   end
 end
